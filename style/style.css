@@ -37,38 +37,330 @@
 		url("/fonts/Montserrat-SemiBold.ttf") format('ttf');
 }
 
-body{
+*{
     box-sizing: border-box;
-    padding-left: 16px;
-    padding-top: 11px;
     margin: 0;
-    padding-right: 8px;
+    padding: 0;
+    text-decoration: none;
+    list-style-type:none;
 }
 
 .navigation{
     display: flex;
     justify-content: space-between;
+    border-bottom: 1px solid #DEDEDE;
+    padding: 11px 8px 11px 15px;
+
 }
 
-@media (max-width: 320px) { 
-    .navigation__links, .navigation__button{
-        display: none;
-    }
-
-    .navigation__burger{
-        width: 40px;
+.navigation__burger{
+    position: relative;
+    width: 40px;
     height: 35px;
-    /* background: #03B2A5; */
     display: flex;
     justify-content: center;
-    }
+}
 
-    .navigation__burger > span{
-        display: block;
+.navigation__burger > span{
+    display: block;
     width: 19px;
     height: 3px;
     background: #03B2A5;
     align-self: center;
     border-radius: 17px;
+}
+
+.navigation__burger > span::after,
+.navigation__burger > span::before{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 19px;
+    height: 3px;
+    background: #03B2A5;
+    align-self: center;
+    border-radius: 17px;
+}
+
+.navigation__burger > span::after{
+    bottom: 10px;
+    left: 10px;
+}
+
+.navigation__burger > span::before{
+    top: 10px;
+    left: 10px;
+}
+
+.history{
+    padding-left: 18px;
+    margin-top: 19px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 8px;
+}
+
+.history > a{
+    color: rgba(51, 51, 51, 0.70);
+    text-align: center;
+    font-family: "Montserrat-Regular", Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+}
+.history a:not(:first-child){
+    padding-left: 4px;
+}
+
+.history > span{
+    width: 6px;
+    height: 6px;
+    border-bottom: 1px solid #333333B2;
+    border-right: 1px solid #333333B2;
+    transform: rotate(-45deg);
+    align-self: center;
+}
+
+h1{
+    font-family: "Montserrat-SemiBold", Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 32px;
+    color:#333333;
+    margin-top: 24px;
+    padding: 0 16px;
+}
+
+.blog__menu{
+    display: flex;
+    overflow: hidden;
+    overflow-x: auto;
+    gap: 8px;
+    margin-top: 24px;
+    padding-left: 16px;
+}
+
+.blog__menu::-webkit-scrollbar{
+    display: none;
+}
+
+.blog__item-menu{
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    border-radius: 24px;
+    border: 1px solid #C1C5CD;
+    background: transparent;
+    font-family: "Montserrat-SemiBold", Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px;
+    padding: 6px 8px;
+}
+
+.blog__cards{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 26px;
+    padding: 0 16px 59px 16px;
+    font-family: "Montserrat-Regular", Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px; 
+}
+
+.blog__topic{
+    position: relative;
+    min-width: 288px;
+    border-radius: 14px;
+    border: 1px solid #DEDEDE;
+    padding-bottom: 15px;
+}
+
+.blog__topic > img{
+    width: 100%;
+    min-height: 206px;
+    border-radius:14px 14px 0 0;
+}
+
+.blog__topic > h2{
+    font-family: "Montserrat-SemiBold", Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 26px; 
+    padding: 0 16px;
+    margin-top: 8px;
+}
+
+.blog__topic_author{
+    font-size: 12px;
+    color: #494949;
+    line-height: 18px;
+    font-weight: 400;
+    margin-top: 4px;
+    padding-left: 17px;
+}
+
+.blog__topic_text{
+    font-family: "Montserrat-Regular", Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    color: #333333;
+    padding: 0 15px;
+    margin-top: 10px;
+}
+
+.blog__topic_date{
+    color: #868686;
+    margin-top: 6px;
+    padding-left: 15px;
+}
+
+.blog__container{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    gap: 8px;
+    top: 4px;
+    left: 7px;
+}
+
+.blog__item-menu_button{
+    background: rgba(255, 255, 255, 0.70);
+}
+
+.blog__button{
+    margin-top: 14px;
+    width: 182px;
+    height: 48px;
+    align-self: center;
+    font-family: "Montserrat-SemiBold", Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    color: #FFF;
+    background: #35B3A9;
+    border-radius: 4px;
+    border: none;
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    background: #2963A3;
+    padding: 35px 16px 20px 16px;
+    font-family: "Montserrat-SemiBold", Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    color: #FFF;
+}
+
+footer ul{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 40px 40px 40px 40px 40px;
+    grid-template-areas:"one two"
+                        "three four"
+                        "five 1fr"
+                        "six seven"
+                        "eight nine";
+}
+
+footer > ul a{
+    font-family: "Montserrat-SemiBold", Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    color: #FFF;
+}
+
+.footer__container_form{
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.footer__text{
+    font-size: 18px;
+    line-height: 26px; 
+}
+
+footer input{
+    border-radius: 4px;
+    border: 1px solid rgba(157, 157, 157, 0.20);
+    background: #FFF;
+    height: 48px;
+    padding-left: 18px;
+    font-family: 'Montserrat-Regular', Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.footer__text_agreement,
+.footer__text_youtalk,
+.footer__link{
+    font-family: 'Montserrat-Regular', Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    padding-top: 4px;
+}
+
+.footer__logo_skillfactory{
+    width: 77%;
+}
+
+.footer__social{
+    display: flex;
+    column-gap: 16px;
+    padding: 12px 0 13px 0;
+    border-bottom: 1px solid #9D9D9D;
+}
+
+.footer__container_links{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer__text_youtalk,
+.footer__link{
+    font-size: 14px;
+    line-height: 20px;
+    margin-top: 11px;
+}
+
+.footer__link{
+    color: #FFFFFF;
+}
+
+@media (max-width: 320px) { 
+    .navigation__links, 
+    .navigation__button{
+        display: none;
+    }
+
+    .blog__topic:nth-child(5),
+    .blog__topic:nth-child(6),
+    .blog__topic:nth-child(7),
+    .blog__topic:nth-child(8){
+        display: none;
     }
 }
