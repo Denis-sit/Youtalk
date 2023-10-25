@@ -49,6 +49,11 @@ button, a{
     cursor: pointer;
 }
 
+body{
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
 .navigation{
     display: flex;
     justify-content: space-between;
@@ -582,10 +587,13 @@ footer input{
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
+        max-width: 1000px;
+        margin: 26px auto 0 auto;
     }
 
     .blog__topic{
         max-width: 304px;
+        min-width: 300px;
     }
 
     .blog__topic:nth-child(1),
@@ -630,6 +638,10 @@ footer input{
 
     .blog{
         padding: 0 120px;
+    }
+
+    .blog__cards{
+        max-width: 1200px;
     }
 
     .blog__topic{
