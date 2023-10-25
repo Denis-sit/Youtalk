@@ -38,7 +38,7 @@
         <section class="blog__menu">
             <button class="blog__item-menu"><img src="img/smail.svg" alt="unicorn">Все</button>
             <button class="blog__item-menu">Самооценка и&nbsp;самопринятие</button>
-            <button class="blog__item-menu"><img src="img/unicorn.svg" alt="unicorn">Self</button>
+            <button class="blog__item-menu blog__item-menu_self"><img src="img/unicorn.svg" alt="unicorn">Self</button>
             <button class="blog__item-menu">Чувства и&nbsp;эмоции</button>
             <button class="blog__item-menu">Тревога</button>
             <button class="blog__item-menu">Упражнения</button>
@@ -129,7 +129,9 @@
                     <button class="blog__item-menu blog__item-menu_button"><img src="img/unicorn.svg" alt="unicorn">Self</button>       
                 </div>
             </div>
-            <button class="blog__button">Ещё</button>
+            <div class="blog__container_button">
+                <button class="blog__button">Ещё</button>
+            </div>
         </section>
     </article>
     <footer>
@@ -146,8 +148,11 @@
             <li><a href="#" title="Перейти по ссылке">Контакты</a></li>
         </ul>
         <div class="footer__container_form">
-            <p class="footer__text">Одно письмо внеделю сосвежими новостями и акциями</p>
-            <input type="email" name="email" placeholder="Ваш e-mail">
+            <p class="footer__text">Одно письмо в неделю сосвежими новостями и акциями</p>
+            <form class="footer__container__email">
+                <input type="email" name="email" placeholder="Ваш e-mail">
+                <button class="footer__button_email"></button>
+            </form>
             <p class="footer__text_agreement">Подписываясь, я соглашаюсь на обработку персональных данных в соответствии 
                 с ФЗ РФ № 152-ФЗ «О персональных данных», а также с Политикой конфиденциальности
             </p>
