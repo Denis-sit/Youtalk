@@ -562,12 +562,17 @@ footer input{
         line-height: 114%;
         padding-left: 32px;
         padding-right: 32px;
+        box-shadow: none;
     }
 
     .navigation__links{
         display: flex;
         justify-content: space-around;
         flex-grow: 3;
+    }
+
+    label{
+        cursor: pointer;
     }
 
     .navigation__button{
@@ -627,6 +632,12 @@ footer input{
 }
 
 @media (min-width: 1440px){
+    body{
+        background: url("/img/background.png");
+        background-repeat: no-repeat;
+        background-position-y: 500px;
+    }
+
     .navigation {
         padding-left: 120px;
         padding-right: 120px;
