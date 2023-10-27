@@ -68,6 +68,7 @@ body{
 
 #materials{
     border: none;
+    cursor: pointer;
 }
 
 .navigation__button{
