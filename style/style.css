@@ -926,6 +926,8 @@ svg{
     min-width: 281px;
     min-height: 288px;
     background: url("../img/backgroundCard.png");
+    background-repeat: no-repeat;
+    align-self: center;
 }
 
 .card__proposal{
