@@ -927,6 +927,7 @@ svg{
     background: url("../img/backgroundCard.png");
     background-repeat: no-repeat;
     align-self: center;
+    border-radius: 16px;
 }
 
 .card__proposal{
@@ -980,5 +981,42 @@ svg{
 
     footer{
         margin-top: 127px;
+    }
+}
+
+@media (min-width: 768px){
+    .blog__container_quote{
+        display: flex;
+        height: 200px;
+    }
+
+    .blog__text_alignment {
+        display: block;
+        margin: auto;
+    }
+
+    .blog__wrapper_content{
+        display: flex;
+        gap: 16px;
+    }
+
+    .blog__container_advice{
+        display: flex;
+        gap: 16px;
+    }
+
+    .card{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .card__item {
+        flex: 1;
+    }
+
+    .card__gift{
+        flex: 1;
+        background-size: cover;
+        padding: 25px
     }
 }
