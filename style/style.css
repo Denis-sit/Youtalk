@@ -1019,4 +1019,24 @@ svg{
         background-size: cover;
         padding: 25px
     }
+
+    @media (min-width: 1024px){
+        .blog__page{
+            display: flex;
+            gap: 24px;
+        }
+
+        .card{
+            margin-top: 40px;
+            flex-direction: column;
+        }
+        
+        .card__item{
+            flex: 0;
+        }
+
+        .card__gift{
+            flex: 0;
+        }
+    }
 }
