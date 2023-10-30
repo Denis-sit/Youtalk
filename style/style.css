@@ -703,7 +703,7 @@ footer input{
 
 .blog__img{
     margin-top: 16px;
-    max-width: 288px;
+    width: 100%;
 }
 
 .blog__content{
@@ -898,8 +898,7 @@ svg{
 }
 
 .blog__button{
-    display: block;
-    margin: 24px auto;
+    width: 100%;
 }
 
 .card__container{
@@ -934,6 +933,9 @@ svg{
     align-items: flex-start;
     text-align: left;
     gap: 16px;
+    background: url("../img/bacgroundCard3.png");
+    background-repeat:no-repeat;
+    background-position: bottom;
 }
 
 .card__title_proposal{
@@ -968,4 +970,15 @@ svg{
     font-style: normal;
     font-weight: 700;
     line-height: 24px;
+}
+
+@media (min-width: 414px){
+    .blog__title{
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    footer{
+        margin-top: 127px;
+    }
 }
