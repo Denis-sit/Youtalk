@@ -309,6 +309,22 @@ h1{
     border: none;
 }
 
+.blog__menu_pages{
+    display: none;
+    flex-wrap: wrap;
+    column-gap: 10px;
+    row-gap: 4px;
+}
+
+.blof__menu_topic{
+    font-family: "Montserrat-Regular";
+	font-style: normal;
+	font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #2963A3;
+}
+
 footer{
     display: flex;
     flex-direction: column;
@@ -642,7 +658,7 @@ footer input{
 }
 
 @media (min-width: 1440px){
-    body{
+    #page_one{
         background: url("/img/background.png");
         background-repeat: no-repeat;
         background-position-y: 500px;
@@ -897,7 +913,7 @@ svg{
     text-align: left;
 }
 
-.blog__button{
+.blog__button_width{
     width: 100%;
 }
 
@@ -973,6 +989,10 @@ svg{
     line-height: 24px;
 }
 
+.connection{
+    display: none;
+}
+
 @media (min-width: 414px){
     .blog__title{
         font-size: 24px;
@@ -1020,23 +1040,96 @@ svg{
         padding: 25px
     }
 
-    @media (min-width: 1024px){
-        .blog__page{
-            display: flex;
-            gap: 24px;
-        }
+}
 
-        .card{
-            margin-top: 40px;
-            flex-direction: column;
-        }
-        
-        .card__item{
-            flex: 0;
-        }
+@media (min-width: 1024px){
+    .blog__page{
+        display: flex;
+        gap: 24px;
+    }
 
-        .card__gift{
-            flex: 0;
-        }
+    .card{
+        margin-top: 40px;
+        flex-direction: column;
+    }
+    
+    .card__item{
+        flex: 0;
+    }
+
+    .card__gift{
+        flex: 0;
+        min-width: 307px;
+    }
+}
+
+
+@media screen and (min-width: 1440px){
+    .blog__page{
+        column-gap: 228px;
+    }
+
+    .blog__page{
+        background: url("../img/backgroundbody.png") center right no-repeat;
+    }
+
+    .blog__text_quote{
+        max-width: 485px;
+    }
+
+    .blog__menu_pages{
+        display: flex;
+    }
+    
+    .connection{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 48px;
+        background: url(../img/backgroundarticle.png) top 50px right no-repeat,
+                    url(../img/backgroundConnecting.png) top 75px right 150px no-repeat;
+        row-gap: 72px; 
+    }
+
+    .connection__line{
+        width: 1200px;
+        border-bottom: 1px solid #DEDEDE;
+    }
+
+    .connection__card{
+        align-self: flex-start;
+        margin-left: 120px;
+        width: 350px;
+    }
+
+    .connection__title{
+        font-family: "Montserrat-SemiBold";
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 56px;
+    }
+
+    .connection__text{
+        font-family: "Montserrat-Regular";
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 26px;
+        margin-top: 24px;
+    }
+
+    .connection__card button{
+        max-width: 238px;
+        margin-top: 32px;
+    }
+
+    .connection svg{
+        margin-bottom: 0;
+    }
+
+    #footer__pages{
+        margin-top: 0;
     }
 }
