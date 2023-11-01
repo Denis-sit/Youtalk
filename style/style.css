@@ -87,7 +87,6 @@ body{
 }
 
 .navigation__burger{
-    position: relative;
     width: 40px;
     height: 35px;
     display: flex;
@@ -96,6 +95,7 @@ body{
 
 .navigation__burger > span{
     display: block;
+    position: relative;
     width: 19px;
     height: 3px;
     background: #03B2A5;
@@ -116,13 +116,13 @@ body{
 }
 
 .navigation__burger > span::after{
-    bottom: 10px;
-    left: 10px;
+    left: 0;
+    top: 6px;
 }
 
 .navigation__burger > span::before{
-    top: 10px;
-    left: 10px;
+    left: 0;
+    top: -6px;
 }
 
 .history{
