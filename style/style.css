@@ -62,14 +62,23 @@ body{
     padding: 11px 8px 11px 15px;
 }
 
-.navigation a,
-.navigation label{
+.navigation a{
     color: #333;
 }
 
 #materials{
-    border: none;
     cursor: pointer;
+}
+
+#select{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    transform: rotate(45deg);
+    margin-left: 5px;
+    margin-bottom: 2px;
 }
 
 .navigation__button{
