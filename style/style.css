@@ -401,9 +401,9 @@ footer input{
     right: 189px;
     border-radius: 4px;
     background-color: #16C8BB;
-    background-image: url("../img/buttonEmail.png");
-    background-repeat: no-repeat;
+    background-image: url("../img/imgBlog/buttonEmail.svg");
     background-position: center;
+    background-repeat: no-repeat;
     border: none;
 }
 
