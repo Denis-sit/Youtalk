@@ -50,16 +50,17 @@ button, a{
     color: black;
 }
 
-body{
-    max-width: 1440px;
+.container{
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 16px;
     margin: 0 auto;
 }
 
 .navigation{
     display: flex;
     justify-content: space-between;
-    border-bottom: 1px solid #DEDEDE;
-    padding: 11px 8px 11px 15px;
+    padding: 11px 0 11px 0;
 }
 
 .navigation a{
@@ -135,8 +136,12 @@ body{
     top: -6px;
 }
 
+.navigation__line{
+    width: 100%;
+    border-bottom: 1px solid #DEDEDE;
+}
+
 .history{
-    padding-left: 18px;
     margin-top: 19px;
     display: flex;
     justify-content: flex-start;
@@ -171,10 +176,6 @@ body{
     transform: rotate(-45deg);
     align-self: center;
     flex-shrink: 0;
-}
-
-.blog{
-    padding: 0 16px;
 }
 
 h1{
@@ -337,22 +338,24 @@ h1{
 }
 
 footer{
+    background: #2963A3;
+    margin-top: 72px;
+}
+
+.container__footer{
     display: flex;
     flex-direction: column;
     gap: 7px;
-    background: #2963A3;
-    padding: 35px 0 20px 0;
+    padding: 35px 19px 20px 20px;
     font-family: "Montserrat-SemiBold", Arial, Helvetica, sans-serif;
     font-size: 16px;
     font-style: normal;
     font-weight: 700;
     line-height: 24px;
     color: #FFF;
-    padding: 35px 14px 37px 18px ;
-    margin-top: 60px;
 }
 
-footer ul{
+.container__footer ul{
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 40px 40px 40px 40px 40px;
@@ -363,7 +366,7 @@ footer ul{
                         "eight nine";
 }
 
-footer > ul a{
+.container__footer > ul a{
     font-family: "Montserrat-SemiBold", Arial, Helvetica, sans-serif;
     font-size: 16px;
     font-style: normal;
@@ -388,7 +391,7 @@ footer > ul a{
     line-height: 26px; 
 }
 
-footer input{
+.container__footer input{
     width: -webkit-fill-available;
     max-width: 320px;
     flex: 1;
@@ -479,8 +482,8 @@ footer input{
         margin-top: 62px;
     }
 
-    footer{
-        padding: 35px 20px 37px 19px;
+    .container__footer{
+        padding: 35px 19px 37px 20px;
     }
 
     .footer__container__email input{
@@ -495,6 +498,10 @@ footer input{
 
 
 @media (min-width: 768px) { 
+    .container{
+        padding: 0 20px;
+    }
+
     h1{
         font-size: 48px;
         line-height: 56px
@@ -506,17 +513,12 @@ footer input{
     }
 
     .navigation{ 
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .navigation__line{
         box-shadow: 0 0px 5px 0px rgba(0, 0, 0, .5);
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-
-    .history {
-        padding-left: 20px;
-    }
-
-    .blog {
-        padding: 0 20px;
     }
 
     .blog__cards{
@@ -536,7 +538,7 @@ footer input{
         grid-column: span 2;
     }
 
-    footer{
+    .container__footer{
         display: grid;
         grid-template-areas:
         "a a "
@@ -545,7 +547,7 @@ footer input{
         grid-column-gap: 31px;  
     }
 
-    footer ul{
+    .container__footer ul{
         grid-template-columns: none;
         grid-column-gap: 37px;
     }
@@ -565,8 +567,8 @@ footer input{
         gap: 50px;
     }
 
-    footer{
-        padding: 35px 20px 23px 20px;
+    .container__footer{
+        padding: 35px 19px 23px 20px;
     }
 
 }
@@ -579,6 +581,11 @@ footer input{
 }
 
 @media (min-width: 1024px) {
+    .container{
+        max-width: 1000px;
+        padding: 0;
+    }
+
     .navigation__burger{
         display: none;
     }
@@ -598,8 +605,9 @@ footer input{
         font-style: normal;
         font-weight: 500;
         line-height: 114%;
-        padding-left: 32px;
-        padding-right: 32px;
+    }
+
+    .navigation__line{
         box-shadow: none;
     }
 
@@ -617,41 +625,33 @@ footer input{
         flex-grow: 2;
     }
 
-    .history {
-        padding-left: 32px;
-    }
-
-    .blog {
-        padding: 0 32px;
-    }
-
     .blog__cards{
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
-        max-width: 1000px;
         margin: 26px auto 0 auto;
+        column-gap: 24px;
     }
 
     .blog__topic{
-        max-width: 304px;
+        max-width: 317px;
         min-width: 300px;
     }
 
     .blog__topic:nth-child(1),
     .blog__topic:nth-child(2){
-        max-width: 468px;
+        max-width: 488px;
     }
 
-    footer{
-        padding: 40px 26px 17px 38px;
+    .container__footer{
+        padding: 40px 0 17px 0;
         grid-template-areas:
         "a b c"
         "d d d";
     }
 
-    footer > ul{
+    .container__footer > ul{
         grid-column: span 1;
     }
 
@@ -670,26 +670,15 @@ footer input{
 }
 
 @media (min-width: 1440px){
-    #page_one{
+    .blog{
         background: url("/img/background.png");
         background-repeat: no-repeat;
-        background-position-y: 500px;
-    }
-
-    .navigation {
-        padding-left: 120px;
-        padding-right: 120px;
-    }
-
-    .history {
-        padding-left: 126px;
-    }
-
-    .blog{
+        background-position-y: 380px;
+        background-size: contain;
         padding: 0 120px;
     }
 
-    .blog__cards{
+    .container{
         max-width: 1200px;
     }
 
@@ -702,8 +691,12 @@ footer input{
         max-width: 588px;
     }
 
-    footer{
-        padding: 40px 120px 17px 120px;
+    .container__footer{
+        padding: 40px 0 17px 0;
+    }
+
+    .footer__container_social{
+        margin-left: 25%;
     }
 }
 
@@ -1055,7 +1048,8 @@ svg{
 }
 
 @media (min-width: 1024px){
-    .blog__page{
+
+    .container__main{
         display: flex;
         gap: 24px;
     }
@@ -1099,8 +1093,7 @@ svg{
         align-items: center;
         justify-content: center;
         margin-top: 48px;
-        background: url(../img/backgroundarticle.png) top 50px right no-repeat,
-                    url(../img/backgroundConnecting.png) top 75px right 150px no-repeat;
+        background: url("../img/backgroundarticle.png") top 50px right no-repeat;
         row-gap: 72px; 
     }
 
@@ -1111,7 +1104,6 @@ svg{
 
     .connection__card{
         align-self: flex-start;
-        margin-left: 120px;
         width: 350px;
     }
 
@@ -1135,6 +1127,20 @@ svg{
     .connection__card button{
         max-width: 238px;
         margin-top: 32px;
+    }
+
+    .container__connection{
+        min-height: 350px;
+        background:url("../img/backgroundConnecting.png") top 18px right no-repeat;
+    }
+
+    .svg{
+        width: 100%;
+        height: 150px;
+        background: url("/img/bagroundsvg.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position-y: bottom;
     }
 
     .connection svg{
